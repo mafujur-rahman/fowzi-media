@@ -1,0 +1,40 @@
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0; 
+  }
+  
+  /* Slider styles */
+  .image-slider {
+    display: flex;
+    width: max-content;
+    animation: slide 15s linear infinite;
+  }
+  
+  .image-slider img {
+    width: 250px; 
+    height: auto;
+    margin-right: 30px; 
+    object-fit: contain; 
+  }
+  
+  /* Animation to slide images from right to left */
+  @keyframes slide {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+  /* Ensures images wrap seamlessly */
+  .image-slider img:nth-child(n+8) {
+    margin-left: 30px; 
+  }
+  

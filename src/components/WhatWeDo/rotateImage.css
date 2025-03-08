@@ -1,0 +1,15 @@
+.rotate-image {
+    width: 300px; /* Adjust the size of the image */
+    height: auto;
+    animation: rotate 10s linear infinite; /* 10s for a full 360-degree rotation */
+}
+
+/* Define the rotation keyframes */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* End at 360 degrees */
+    }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import CreativeStudio from "@/components/creative-studio/CreativeStudio";
-import GallerySlider from "@/components/gallery/GallerySlyder";
+import GallerySlider from "@/components/gallery/GallerySlider";
 import HeroBanner from "@/components/hero-banner/Hero-banner";
 import LatestProjectsHome from "@/components/latest-projects/LatestProjectsHome";
 import TalkSection from "@/components/talk-section/TalkSection";
@@ -17,7 +17,7 @@ const HomeMain = () => {
         {/* hero area end */}
 
         {/* gallery area start */}
-        {/* <GallerySlider /> */}
+        <GallerySlider />
         {/* gallery area end */}
 
         {/* what we do section start */}

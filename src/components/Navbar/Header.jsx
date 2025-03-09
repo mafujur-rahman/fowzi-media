@@ -1,11 +1,18 @@
 'use client';
-import { useState } from "react";
+import  {useState}  from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi"; 
 
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // Close menu on mobile after clickingF
+    }
+  };
 
   return (
     <nav className="flex items-center justify-between p-5 lg:px-20">
@@ -24,23 +31,36 @@ export default function Header() {
 
       {/* Navigation Links */}
       <ul
-        className={` top-16 left-0 px-4 w-full bg-[#424242] text-white text-2xl rounded-2xl fixed lg:flex lg:relative lg:top-0 lg:w-auto gap-4 items-center lg:px-0 shadow-lg lg:shadow-none transition-all duration-300 ${isOpen ? "block" : "hidden"
-          } lg:flex`}
-        
-          style={{ fontFamily: 'Glacial Indifference' }}
+        className={`top-16 left-0 px-4 w-full bg-[#424242] text-white text-2xl rounded-2xl fixed lg:flex lg:relative lg:top-0 lg:w-auto gap-4 items-center lg:px-0 shadow-lg lg:shadow-none transition-all duration-300 ${
+          isOpen ? "block" : "hidden"
+        } lg:flex`}
+        style={{ fontFamily: 'Glacial Indifference' }}
       >
-        {["HOME", "SERVICES", "ABOUT", "PORTFOLIO", "CASE STUDIES", "CONTACT"].map((item) => (
-          <li key={item} className="text-lg p-3 cursor-pointer">
-            {item}
-          </li>
-        ))}
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("/")}>HOME</a>
+        </li>
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("services")}>SERVICES</a>
+        </li>
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("about")}>ABOUT</a>
+        </li>
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("portfolio")}>PORTFOLIO</a>
+        </li>
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("case-studies")}>CASE STUDIES</a>
+        </li>
+        <li className="text-lg p-3 cursor-pointer">
+          <a href="#" onClick={() => handleScroll("contact")}>CONTACT</a>
+        </li>
       </ul>
 
       {/* Social Icons */}
       <div className="hidden lg:flex gap-3">
-        <button className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaTwitter /></button>
-        <button className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaFacebook /></button>
-        <button className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaInstagram /></button>
+        <a href="#" className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaTwitter /></a>
+        <a href="#" className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaFacebook /></a>
+        <a href="#" className="text-xl bg-gray-200 rounded-full p-3 hover:bg-black hover:text-[#FF0101] hover:delay-100"><FaInstagram /></a>
       </div>
     </nav>
   );

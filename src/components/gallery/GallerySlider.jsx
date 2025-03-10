@@ -49,7 +49,7 @@ const GallerySlider = () => {
       </div>
 
       {/* Fixed Shape Image on Bottom */}
-      <div className="absolute bottom-47 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
         <img 
           className="bg-no-repeat w-full h-auto max-w-[350px] sm:max-w-[300px] md:max-w-full" 
           src="/assets/img/home-03/gallery/gal-shape-2.png" 

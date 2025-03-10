@@ -26,7 +26,7 @@ const GallerySlider = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden w-full h-80 min-h-screen">
+    <div className="relative overflow-hidden flex-wrap w-full h-80 min-h-screen">
       {/* Fixed Shape Image on Top */}
       <div className="absolute top-0 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
         <img 
@@ -49,7 +49,7 @@ const GallerySlider = () => {
       </div>
 
       {/* Fixed Shape Image on Bottom */}
-      <div className="absolute bottom-42 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
+      <div className="absolute bottom-47 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
         <img 
           className="bg-no-repeat w-full h-auto max-w-[350px] sm:max-w-[300px] md:max-w-full" 
           src="/assets/img/home-03/gallery/gal-shape-2.png" 

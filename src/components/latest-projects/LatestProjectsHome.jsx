@@ -48,7 +48,7 @@ const LatestProjectsHome = () => {
             <div className='grid justify-center pt-16'>
                 <div className='text-white flex gap-5 items-center'>
                     {/* "Latest" with wave effect */}
-                    <h1 ref={latestRef} className='text-9xl flex ' style={{ fontFamily: 'Glacial Indifference' }}>
+                    <h1 ref={latestRef} className='text-9xl flex ' >
                         {"Latest".split("").map((letter, i) => (
                             <span key={i} className="inline-block">{letter}</span>
                         ))}
@@ -66,7 +66,7 @@ const LatestProjectsHome = () => {
                 </div>
 
                 {/* "Projects" with wave effect */}
-                <h1 ref={projectsRef} className=' text-9xl ml-16 flex text-[#FF0101]' style={{ fontFamily: 'Glacial Indifference' }}>
+                <h1 ref={projectsRef} className=' text-9xl ml-16 flex text-[#FF0101]' >
                     {"Projects".split("").map((letter, i) => (
                         <span key={i} className="inline-block">{letter}</span>
                     ))}

@@ -37,7 +37,7 @@ export default function Header() {
         style={{ fontFamily: 'Glacial Indifference' }}
       >
         <li className="text-lg p-3 cursor-pointer">
-          <a href="#" onClick={() => handleScroll("/")}>HOME</a>
+          <a href="/" onClick={() => handleScroll("/")}>HOME</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
           <a href="#" onClick={() => handleScroll("services")}>SERVICES</a>

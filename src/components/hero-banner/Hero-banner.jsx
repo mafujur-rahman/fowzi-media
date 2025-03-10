@@ -77,7 +77,7 @@ export default function HeroBanner() {
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-green-300 to-red-300 blur-3xl opacity-20"></div>
 
             {/* Hero Content */}
-            <h2 ref={textRef} className="text-6xl lg:text-8xl font-bold" style={{ fontFamily: 'Glacial Indifference' }}>
+            <h2 ref={textRef} className="text-6xl lg:text-8xl font-bold" >
                 <span>We're a <span className="text-[#FF0101]">high-end</span></span> <br /> <span><span className="text-[#FF0101]">digital</span> agency</span>
             </h2>
 

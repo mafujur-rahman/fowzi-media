@@ -47,13 +47,11 @@ const TalkSection = () => {
         </h1>
 
         <div className="flex flex-col sm:flex-row pt-5 gap-8 sm:gap-12 text-start">
-          <div className="relative flex items-center justify-center">
+          <div className="relative md:flex items-center justify-center">
             <button
-              className="relative bg-[#FF0101] text-white p-6 sm:p-8 text-xl sm:text-2xl rounded-2xl flex flex-col items-center justify-center gap-2 border border-[#1E1E1E] shadow-lg transform rotate-45"
+              className="relative bg-[#FF0101] text-white p-6 sm:p-8 h-28 md:h-32 w-28 md:w-32 text-xl sm:text-2xl rounded-2xl flex flex-col items-center justify-center gap-2 border border-[#1E1E1E] shadow-lg transform rotate-45"
               style={{
-                fontFamily: "Glacial Indifference",
-                width: "120px", 
-                height: "120px", 
+                fontFamily: "Glacial Indifference", 
               }}
             >
               <div className="transform -rotate-45 flex flex-col items-center">

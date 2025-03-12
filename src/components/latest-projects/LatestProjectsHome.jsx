@@ -48,7 +48,7 @@ const LatestProjectsHome = () => {
             <div className='grid justify-center pt-16'>
                 <div className='text-white flex gap-5 items-center'>
                     {/* "Latest" with wave effect */}
-                    <h1 ref={latestRef} className='text-9xl flex ' >
+                    <h1 ref={latestRef} className='text-6xl md:text-9xl flex ' >
                         {"Latest".split("").map((letter, i) => (
                             <span key={i} className="inline-block">{letter}</span>
                         ))}
@@ -56,7 +56,7 @@ const LatestProjectsHome = () => {
 
                     {/* Rhombus Button */}
                     <button
-                        className="bg-[#FF0101] text-white p-6 w-32 h-32 flex flex-col items-center rounded-2xl ml-5 justify-center border border-[#1E1E1E] shadow-lg"
+                        className="bg-[#FF0101] text-white p-6 w-24 md:w-32 h-24 md:h-32 flex flex-col items-center rounded-2xl ml-5 justify-center border border-[#1E1E1E] shadow-lg"
                         style={{ transform: "rotate(45deg)" }}
                     >
                         <div style={{ transform: "rotate(-45deg)" }} className="flex flex-col items-center">
@@ -66,7 +66,7 @@ const LatestProjectsHome = () => {
                 </div>
 
                 {/* "Projects" with wave effect */}
-                <h1 ref={projectsRef} className=' text-9xl ml-16 flex text-[#FF0101]' >
+                <h1 ref={projectsRef} className='text-6xl md:text-9xl ml-16 flex text-[#FF0101]' >
                     {"Projects".split("").map((letter, i) => (
                         <span key={i} className="inline-block">{letter}</span>
                     ))}

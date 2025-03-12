@@ -37,7 +37,7 @@ export default function AboutUsArea() {
   }, []);
 
   return (
-    <div className="relative pt-20 pb-24 z-10">
+    <div className="md:relative pt-20 pb-24 z-10">
       <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Image Section with Scroll Animations */}
         <div ref={imgSectionRef} className="flex gap-10 mb-24 relative">
@@ -51,7 +51,7 @@ export default function AboutUsArea() {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col gap-6 relative">
+          <div className="w-full md:w-1/2 md:flex flex-col hidden gap-6 relative">
             <div className="relative z-10">
               <Image
                 src={ab_3}
@@ -70,7 +70,7 @@ export default function AboutUsArea() {
         </div>
 
         {/* About Content */}
-        <div id="about-info" className="mb-16 mt-72 ">
+        <div id="about-info" className="mb-20 mt-72 ">
           <div className="max-w-4xl">
             <div className="relative space-y-6">
               <span className="inline-flex items-center gap-2 text-xl absolute -rotate-30 bg-black text-white p-3 rounded-lg font-semibold">
@@ -85,7 +85,7 @@ export default function AboutUsArea() {
         </div>
 
         {/* What I Do Section */}
-        <div className="flex gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {/* Title Box */}
           <div className="w-full md:w-1/3 mb-10 relative">
             <h4 className="text-2xl text-gray-600 font-bold leading-snug relative z-10">

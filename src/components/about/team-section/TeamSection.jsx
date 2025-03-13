@@ -1,10 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 const TeamSection = () => {
   const sliderRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   const people = [
     { name: "Abdurahman Ali", title: "Photographer/Videographer", img: "/assets/img/inner-about/team/HS2.jpeg" },
@@ -50,11 +53,92 @@ const TeamSection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Mouse/Touch drag functionality
+  useEffect(() => {
+    const slider = sliderRef.current;
+
+    const onMouseDown = (e) => {
+      isDragging.current = true;
+      slider.classList.add("cursor-grabbing");
+      startX.current = e.pageX - slider.offsetLeft;
+      scrollLeft.current = slider.offsetLeft;
+    };
+
+    const onMouseLeave = () => {
+      isDragging.current = false;
+      slider.classList.remove("cursor-grabbing");
+    };
+
+    const onMouseUp = () => {
+      isDragging.current = false;
+      slider.classList.remove("cursor-grabbing");
+    };
+
+    const onMouseMove = (e) => {
+      if (!isDragging.current) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX.current) ; // Adjust the scroll sensitivity
+      gsap.to(slider, {
+        x: `+=${walk}`,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    };
+
+    // Touch events for mobile
+    const onTouchStart = (e) => {
+      isDragging.current = true;
+      startX.current = e.touches[0].pageX - slider.offsetLeft;
+      scrollLeft.current = slider.offsetLeft;
+    };
+
+    const onTouchEnd = () => {
+      isDragging.current = false;
+    };
+
+    const onTouchMove = (e) => {
+      if (!isDragging.current) return;
+      const x = e.touches[0].pageX - slider.offsetLeft;
+      const walk = (x - startX.current) * 1.5;
+      gsap.to(slider, {
+        x: `+=${walk}`,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    };
+
+    // Add event listeners
+    slider.addEventListener("mousedown", onMouseDown);
+    slider.addEventListener("mouseleave", onMouseLeave);
+    slider.addEventListener("mouseup", onMouseUp);
+    slider.addEventListener("mousemove", onMouseMove);
+
+    slider.addEventListener("touchstart", onTouchStart);
+    slider.addEventListener("touchend", onTouchEnd);
+    slider.addEventListener("touchmove", onTouchMove);
+
+    // Clean up
+    return () => {
+      slider.removeEventListener("mousedown", onMouseDown);
+      slider.removeEventListener("mouseleave", onMouseLeave);
+      slider.removeEventListener("mouseup", onMouseUp);
+      slider.removeEventListener("mousemove", onMouseMove);
+
+      slider.removeEventListener("touchstart", onTouchStart);
+      slider.removeEventListener("touchend", onTouchEnd);
+      slider.removeEventListener("touchmove", onTouchMove);
+    };
+  }, []);
+
   return (
     <div className="relative overflow-hidden w-full flex items-center py-8">
-      {/* Scroll Controlled Team Slider */}
+      {/* Scroll Controlled + Draggable Team Slider */}
       <div className="overflow-hidden w-full">
-        <div ref={sliderRef} className="flex w-max">
+        <div
+          ref={sliderRef}
+          className="flex w-max cursor-grab transition-transform duration-300 ease-out"
+        >
           {people.map((person, index) => (
             <div
               key={index}

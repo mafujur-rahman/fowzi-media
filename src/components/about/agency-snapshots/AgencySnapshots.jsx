@@ -56,9 +56,9 @@ const AgencySnapshots = () => {
 
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <h3 className="text-sm uppercase text-gray-500 mb-4">Fun Facts</h3>
+            <h3 className="text-sm uppercase text-[#FF0101] mb-4">Fun Facts</h3>
             <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-              Agency <br /> Snapshots
+              Agency <br /> Snap<span className='text-[#FF0101]'>shots</span>
             </h2>
           </div>
 

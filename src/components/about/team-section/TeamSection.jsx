@@ -7,7 +7,7 @@ const TeamSection = () => {
   const sliderRef = useRef(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
-  const scrollLeft = useRef(0);
+  const currentX = useRef(0); // To track current translateX value smoothly
 
   const people = [
     { name: "Abdurahman Ali", title: "Photographer/Videographer", img: "/assets/img/inner-about/team/HS2.jpeg" },
@@ -40,12 +40,15 @@ const TeamSection = () => {
 
       const moveX = -scrollPercentage * totalWidth;
 
-      // Apply GSAP animation for smooth horizontal scrolling
+      // Smooth scrolling
       gsap.to(slider, {
         x: moveX,
         duration: 0.5,
         ease: "power2.out",
       });
+
+      // Update currentX to keep sync with drag
+      currentX.current = moveX;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -60,8 +63,7 @@ const TeamSection = () => {
     const onMouseDown = (e) => {
       isDragging.current = true;
       slider.classList.add("cursor-grabbing");
-      startX.current = e.pageX - slider.offsetLeft;
-      scrollLeft.current = slider.offsetLeft;
+      startX.current = e.pageX;
     };
 
     const onMouseLeave = () => {
@@ -77,57 +79,72 @@ const TeamSection = () => {
     const onMouseMove = (e) => {
       if (!isDragging.current) return;
       e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX.current) ;
+      const x = e.pageX;
+      const walk = (x - startX.current) * 1; // Adjust multiplier for sensitivity
+
+      // Apply smooth dragging
       gsap.to(slider, {
-        x: `+=${walk}`,
-        duration: 0.3,
-        ease: "power2.out",
+        x: currentX.current + walk,
+        duration: 0.2,
+        ease: "power3.out",
       });
     };
 
-    // Touch events for mobile
-    const onTouchStart = (e) => {
-      isDragging.current = true;
-      startX.current = e.touches[0].pageX - slider.offsetLeft;
-      scrollLeft.current = slider.offsetLeft;
+    const onMouseEnd = (e) => {
+      if (!isDragging.current) return;
+      const x = e.pageX;
+      const walk = (x - startX.current) * 1;
+      currentX.current += walk; // Update final position for future drags
+      isDragging.current = false;
+      slider.classList.remove("cursor-grabbing");
     };
 
-    const onTouchEnd = () => {
-      isDragging.current = false;
+    // Touch events
+    const onTouchStart = (e) => {
+      isDragging.current = true;
+      startX.current = e.touches[0].pageX;
     };
 
     const onTouchMove = (e) => {
       if (!isDragging.current) return;
-      const x = e.touches[0].pageX - slider.offsetLeft;
-      const walk = (x - startX.current) * 1.5;
+      const x = e.touches[0].pageX;
+      const walk = (x - startX.current) * 1; // Adjust for sensitivity if needed
+
       gsap.to(slider, {
-        x: `+=${walk}`,
-        duration: 0.3,
-        ease: "power2.out",
+        x: currentX.current + walk,
+        duration: 0.2,
+        ease: "power3.out",
       });
+    };
+
+    const onTouchEnd = (e) => {
+      if (!isDragging.current) return;
+      const x = e.changedTouches[0].pageX;
+      const walk = (x - startX.current) * 1;
+      currentX.current += walk; // Save position
+      isDragging.current = false;
     };
 
     // Add event listeners
     slider.addEventListener("mousedown", onMouseDown);
     slider.addEventListener("mouseleave", onMouseLeave);
-    slider.addEventListener("mouseup", onMouseUp);
+    slider.addEventListener("mouseup", onMouseEnd);
     slider.addEventListener("mousemove", onMouseMove);
 
     slider.addEventListener("touchstart", onTouchStart);
-    slider.addEventListener("touchend", onTouchEnd);
     slider.addEventListener("touchmove", onTouchMove);
+    slider.addEventListener("touchend", onTouchEnd);
 
     // Clean up
     return () => {
       slider.removeEventListener("mousedown", onMouseDown);
       slider.removeEventListener("mouseleave", onMouseLeave);
-      slider.removeEventListener("mouseup", onMouseUp);
+      slider.removeEventListener("mouseup", onMouseEnd);
       slider.removeEventListener("mousemove", onMouseMove);
 
       slider.removeEventListener("touchstart", onTouchStart);
-      slider.removeEventListener("touchend", onTouchEnd);
       slider.removeEventListener("touchmove", onTouchMove);
+      slider.removeEventListener("touchend", onTouchEnd);
     };
   }, []);
 
@@ -149,7 +166,8 @@ const TeamSection = () => {
                 alt={person.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-opacity-60 opacity-0 group-hover:opacity-100 flex flex-col justify-end text-white text-center p-4 transition-opacity duration-500">
+              {/* Gradient background only at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end text-white text-center p-4 transition-opacity duration-500">
                 <p className="text-sm">{person.title}</p>
                 <p className="text-lg font-bold">{person.name}</p>
               </div>
@@ -158,6 +176,7 @@ const TeamSection = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

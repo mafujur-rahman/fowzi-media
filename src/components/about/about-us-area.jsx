@@ -68,8 +68,8 @@ export default function AboutUsArea() {
         y: -200, 
         scrollTrigger: {
           trigger: imageRef.current,
-          start: "bottom top", 
-          end: "top bottom", 
+          start: "top bottom", 
+          end: "bottom top", 
           scrub: 1, 
         },
       });
@@ -109,7 +109,7 @@ export default function AboutUsArea() {
         {/* =================== Image Section =================== */}
         <div className="flex justify-between gap-10 relative">
           {/* Left Image Container */}
-          <div className="w-full -top-40  md:w-1/2 relative h-[550px] overflow-hidden">
+          <div className="w-full -top-30  md:w-1/2 relative h-[550px] overflow-hidden">
             <div ref={imageRef} className=" w-full max-w-[500px]">
               <Image
                 src={ab_1}
@@ -131,7 +131,7 @@ export default function AboutUsArea() {
             </div>
 
             {/*  Overlapping Image with Animation */}
-            <div ref={image2Ref} className="absolute -right-20 -bottom-40 w-2/3 md:w-1/2 lg:w-auto z-20">
+            <div ref={image2Ref} className="absolute -right-3 bottom-40 md:-right-10 md:bottom-10 lg:-right-10 lg:-bottom-40 w-2/3 md:w-1/2 lg:w-auto z-20">
               <Image
                 src={ab_3}
                 alt="about-img-3"
@@ -142,7 +142,7 @@ export default function AboutUsArea() {
         </div>
 
         {/* =================== About Content =================== */}
-        <div id="about-info" ref={aboutContentRef} className="mb-20 ">
+        <div id="about-info" ref={aboutContentRef} className="mb-20 -mt-80 md:-mt-44 lg:mt-10 ">
           <div className="max-w-4xl">
             <div className="relative space-y-6">
               <span className="inline-flex items-center gap-2 text-xl absolute -rotate-30 bg-black text-white p-3 rounded-lg font-semibold">
@@ -176,7 +176,7 @@ export default function AboutUsArea() {
             <Image
               src={shape}
               alt="shape"
-              className="absolute top-5 -right-5 w-24 h-24 hidden md:block"
+              className="absolute md:top-10 md:-right-7 lg:top-5 lg:-right-5 w-24 h-24 hidden md:block"
             />
           </div>
 

@@ -30,7 +30,7 @@ const TeamSection = () => {
       slider.appendChild(clone);
     });
 
-    const totalWidth = slider.scrollWidth / 2; // Since duplicated
+    const totalWidth = slider.scrollWidth / 2;
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -78,7 +78,7 @@ const TeamSection = () => {
       if (!isDragging.current) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX.current) ; // Adjust the scroll sensitivity
+      const walk = (x - startX.current) ;
       gsap.to(slider, {
         x: `+=${walk}`,
         duration: 0.3,

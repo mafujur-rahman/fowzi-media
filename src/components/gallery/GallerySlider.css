@@ -1,0 +1,28 @@
+/* Custom CSS for Image Sizing */
+.gallery-image {
+    width: 25%; /* Ensures that 4 images will fit */
+    height: auto;
+    margin: 0 8px; /* Adds some space between images */
+  }
+  
+  @media (max-width: 1024px) {
+    /* Tablet - 4 images per row */
+    .gallery-image {
+      width: 25%; /* 4 images on medium screens like tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Mobile - 4 images per row */
+    .gallery-image {
+      width: 25%; /* 4 images on mobile devices */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Mobile - Smaller screens */
+    .gallery-image {
+      width: 25%; /* 4 images on smaller screens */
+    }
+  }
+  

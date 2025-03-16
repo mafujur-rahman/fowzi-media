@@ -1,12 +1,13 @@
 "use client";
 
-import CreativeStudio from "@/components/creative-studio/CreativeStudio";
+
 import GallerySlider from "@/components/gallery/GallerySlider";
 import HeroBanner from "@/components/hero-banner/Hero-banner";
 import LatestProjectsHome from "@/components/latest-projects/LatestProjectsHome";
 import TalkSection from "@/components/talk-section/TalkSection";
 import VideoSection from "@/components/video-section/VideoSection";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
+import OurServices from "@/components/services/OurServices";
 
 const HomeMain = () => {
   return (
@@ -33,7 +34,7 @@ const HomeMain = () => {
         {/* video section end */}
 
         {/* creative studio section start */}
-        <CreativeStudio />
+        <OurServices />
         {/* creative studio section end */}
 
         {/* talk section start */}

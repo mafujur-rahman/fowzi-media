@@ -8,42 +8,53 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroBanner() {
     const textRef = useRef(null);
-    const subTextRef = useRef(null);
     const sectionRef = useRef(null);
     const circleRef = useRef(null);
     let hoverAnimation = useRef(null);
 
-    useLayoutEffect(() => {
-        // Animate heading text
-        gsap.fromTo(
-            textRef.current.children,
-            { y: 30, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                stagger: 0.05,
-                duration: 1.5,
-                ease: "power3.out",
+    // Split text into spans of letters only, keeping inner styles
+    const splitText = (element) => {
+        const nodes = Array.from(element.childNodes);
+        nodes.forEach((node) => {
+            if (node.nodeType === 3) {
+                const letters = node.textContent.split('').map((letter) => {
+                    return `<span class="letter inline-block">${letter === ' ' ? '&nbsp;' : letter}</span>`;
+                }).join('');
+                const tempDiv = document.createElement('span');
+                tempDiv.innerHTML = letters;
+                node.replaceWith(...tempDiv.childNodes);
+            } else if (node.nodeType === 1) {
+                splitText(node); // Recursive for styled spans
             }
-        );
+        });
+    };
 
-        // Fade-in effect for subtext
+    useLayoutEffect(() => {
+        // Split and animate
+        if (textRef.current) {
+            splitText(textRef.current);
+        }
+
+        // Wave animation
         gsap.fromTo(
-            subTextRef.current,
-            { opacity: 0, y: 30 },
+            textRef.current.querySelectorAll(".letter"),
+            { y: 80, opacity: 0 },
             {
-                opacity: 1,
                 y: 0,
-                delay: 0.5,
+                opacity: 1,
                 duration: 1.2,
                 ease: "power3.out",
+                stagger: {
+                    each: 0.04,
+                    from: "start",
+                },
             }
         );
 
-        // Scroll animation for section
+        // Section scroll animation
         gsap.fromTo(
             sectionRef.current,
-            { opacity: 0, y: 50 },
+            { opacity: 0, y: 80 },
             {
                 opacity: 1,
                 y: 0,
@@ -58,6 +69,7 @@ export default function HeroBanner() {
         );
     }, []);
 
+    // Hover animation for icon
     useLayoutEffect(() => {
         if (!circleRef.current) return;
 
@@ -72,27 +84,30 @@ export default function HeroBanner() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="text-center px-5 lg:px-20 mt-6 py-20 relative flex flex-col justify-center items-center">
-            {/* Background Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 via-green-300 to-red-300 blur-3xl opacity-20"></div>
-
+        <section
+            ref={sectionRef}
+            className="text-center px-5 lg:px-20 mt-6 py-20 relative flex flex-col justify-center items-center"
+        >
             {/* Hero Content */}
-            <h2 ref={textRef} className="text-6xl lg:text-8xl font-bold" >
-                <span>We're a <span className="text-[#FF0101]">high-end</span></span> <br /> <span><span className="text-[#FF0101]">digital</span> agency</span>
+            <h2 ref={textRef} className="text-4xl md:text-6xl lg:text-8xl font-bold leading-tight">
+                FOWZI <span className="text-[#FF0101]">MEDIA</span> 
             </h2>
 
             {/* Subtext */}
-            <p ref={subTextRef} className="mt-8 text-lg text-gray-600" style={{ fontFamily: 'Glacial Indifference' }}>
-                UX/UI DESIGN / MOTION DESIGN / BRANDING / DEVELOPMENT
+            <p
+                className="mt-8 text-[10px] md:text-lg text-gray-600"
+                style={{ fontFamily: 'Glacial Indifference' }}
+            >
+                We combine artistry with strategy, <br /> creating digital solutions.
             </p>
 
             {/* Button */}
-            <div className="mt-8 text-center ">
+            <div className="mt-8 text-center">
                 <button
                     style={{ fontFamily: "Glacial Indifference" }}
-                    className="px-8 py-3 bg-black text-white  rounded-full text-lg shadow-lg transition-all flex items-center justify-center"
+                    className="px-8 py-3 bg-black text-white rounded-full text-lg shadow-lg transition-all flex items-center justify-center"
                 >
-                    Say Hello
+                    Hire Us
                     <span
                         ref={circleRef}
                         className="bg-white p-2 ml-2 rounded-full hover:bg-red-600 text-black transition-all duration-300 ease-in-out"

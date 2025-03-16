@@ -3,10 +3,11 @@ import '../WhatWeDo/rotateImage.css';
 import { TiArrowRightThick } from 'react-icons/ti';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CreativeStudio = () => {
+const OurServices = () => {
     useEffect(() => {
         // GSAP Animation for text color change and image color change on scroll
         gsap.fromTo(
@@ -45,12 +46,12 @@ const CreativeStudio = () => {
 
 
     return (
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div id='services' className="bg-white py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 {/* Main Heading */}
-                <p className="text-xl text-[#FF0101] mb-8" style={{ fontFamily: 'Glacial Indifference' }}>(  Our Approach  )</p>
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 flex gap-5 items-center" style={{ fontFamily: 'Glacial Indifference' }}>
-                    <span className="animate-text" style={{ fontFamily: 'Glacial Indifference' }}>Creative</span>
+                <p className="text-xl text-[#FF0101] mb-8" style={{ fontFamily: 'Glacial Indifference' }}>(  Our Services  )</p>
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-4 flex gap-5 items-center" style={{ fontFamily: 'Glacial Indifference' }}>
+                    <span className="animate-text" style={{ fontFamily: 'Glacial Indifference' }}>Thoughtful</span>
                     <img
                         className='rotate-image'
                         style={{ width: "30px", height: "30px" }}
@@ -59,8 +60,8 @@ const CreativeStudio = () => {
                     />
                 </h1>
 
-                <h1 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-12'>
-                    <span className="animate-text" style={{ fontFamily: 'Glacial Indifference' }}> <span className='text-[#FF0101]'>development</span> studio</span>
+                <h1 className=' font-bold text-gray-900 mb-12'>
+                    <span className="animate-text" style={{ fontFamily: 'Glacial Indifference' }}> <span className='text-[#FF0101] text-4xl sm:text-5xl md:text-6xl'>Process</span> <span className='h-[20px] w-auto'>We Think a lot</span></span>
                 </h1>
 
                 {/* Divider */}
@@ -68,29 +69,27 @@ const CreativeStudio = () => {
 
                 {/* Product Design Section */}
                 <div className="mb-12 flex flex-col sm:flex-row justify-between sm:space-x-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Product design</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Branding</h2>
                     <div className="flex flex-col sm:flex-row sm:space-x-4">
                         <div>
                             <p className="text-lg text-gray-600 mb-6 sm:mb-0" style={{ fontFamily: 'Glacial Indifference' }}>
-                                Once we have an idea of your needs, a research and design process <br />
-                                begins to gain deep knowledge about the business, users <br />
-                                and world content.
+                            We specialize in crafting captivating brand identities that resonate with <br /> your audience and leave a lasting impression.
                             </p>
                             <div className="flex flex-wrap gap-4 sm:gap-8 mt-5" style={{ fontFamily: 'Glacial Indifference' }}>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">RESEARCH</span>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">U/LUX</span>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">PROTOTYPING</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Brand Strategy</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Social Media Branding</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Brand Guidelines</span>
                             </div>
                         </div>
 
                     </div>
                     <button
                        
-                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                        See <br /> Details <br />
-                        <TiArrowRightThick className="text-2xl mt-1" />
+                       <Link href={'/services'}> See <br /> Details <br />
+                       <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>
 
@@ -99,29 +98,27 @@ const CreativeStudio = () => {
 
                 {/* Web/Mobile Section */}
                 <div className="mb-12 flex flex-col sm:flex-row justify-between sm:space-x-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Web/Mobile</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Web Development</h2>
                     <div className="flex flex-col sm:flex-row sm:space-x-4">
                         <div>
                             <p className="text-lg text-gray-600 mb-6 sm:mb-0" style={{ fontFamily: 'Glacial Indifference' }}>
-                                Once we have an idea of your needs, a research and design process <br />
-                                begins to gain deep knowledge about the business, users <br />
-                                and world content.
+                            We specialize in creating stunning websites that captivate your audience and drive results.
                             </p>
                             <div className="flex flex-wrap gap-4 sm:gap-8 mt-5" style={{ fontFamily: 'Glacial Indifference' }}>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">SED</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">SEO</span>
                                 <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">CREATIVE DEVELOPMENT</span>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">WIDEL</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Custom Proactive Solutions</span>
                             </div>
                         </div>
 
                     </div>
                     <button
-                        
-                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg  flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+                       
+                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                        See <br /> Details <br />
-                        <TiArrowRightThick className="text-2xl mt-1" />
+                       <Link href={'/services'}> See <br /> Details <br />
+                       <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>
 
@@ -130,28 +127,27 @@ const CreativeStudio = () => {
 
                 {/* Consulting Section */}
                 <div className='flex flex-col sm:flex-row justify-between sm:space-x-8'>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Consulting</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Videography</h2>
                     <div className="flex flex-col sm:flex-row sm:space-x-4">
                         <div>
                             <p className="text-lg text-gray-600 mb-6 sm:mb-0" style={{ fontFamily: 'Glacial Indifference' }}>
-                                Once we have an idea of your needs, a research and design process <br />
-                                begins to gain deep knowledge about the business, users <br />
-                                and world content.
+                            We specializes in professional videography services that bring your vision to life and <br /> leavea lasting impression.
                             </p>
                             <div className="flex flex-wrap gap-4 sm:gap-8 mt-5" style={{ fontFamily: 'Glacial Indifference' }}>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">CREATIVE</span>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">DIGITAL STRATEGY</span>
-                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">MVP</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Creative</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Brand Storytelling</span>
+                                <span className="text-sm font-medium border border-gray-300 rounded-3xl p-3 cursor-pointer text-gray-500">Promotional Videos</span>
                             </div>
                         </div>
 
                     </div>
                     <button
-                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg  flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
+                       
+                        className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                        See <br /> Details <br />
-                        <TiArrowRightThick className="text-2xl mt-1" />
+                       <Link href={'/services'}> See <br /> Details <br />
+                       <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>
 
@@ -162,4 +158,4 @@ const CreativeStudio = () => {
     );
 };
 
-export default CreativeStudio;
+export default OurServices;

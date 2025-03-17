@@ -121,7 +121,7 @@ const BrandingDetails = () => {
                         Branding is essential to establish yourself in the market in a unique and permanent way. At Riveal, we attach great importance. We seek to understand your business to better convey your values ​​and your talent through your brand image.
                     </p>
                     <p className='my-6 reveal-paragraph'>
-                        Explore our achievements and let yourself be convinced!
+                    Explore our portfolio and see how we bring brands to life online!
                     </p>
                 </div>
 

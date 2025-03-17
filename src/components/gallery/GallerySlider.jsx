@@ -26,25 +26,25 @@ const GallerySlider = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden flex-wrap w-full h-80 min-h-screen">
+    <div className="relative overflow-hidden flex-wrap w-full h-auto ">
       {/* Fixed Shape Image on Top */}
       <div className="absolute top-0 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
         <img
           className="bg-no-repeat w-full h-auto"
-          src="/assets/img/home-03/gallery/gal-shape-1.png"
+          src="/assets/img/gallery/gal-shape-1.png"
           alt="Decorative Shape"
         />
       </div>
 
       {/* Scrolling Image Gallery */}
       <div>
-        <div ref={sliderRef} className="flex w-max h-full bg-cover">
+        <div ref={sliderRef} className="flex w-fit h-full bg-cover">
           {/* Gallery Images */}
-          <img src="/assets/img/home-03/gallery/gal-1.jpg" alt="Slide 1" className="gallery-image" />
-          <img src="/assets/img/home-03/gallery/gal-2.jpg" alt="Slide 2" className="gallery-image" />
-          <img src="/assets/img/home-03/gallery/gal-3.jpg" alt="Slide 3" className="gallery-image" />
-          <img src="/assets/img/home-03/gallery/gal-4.jpg" alt="Slide 4" className="gallery-image" />
-          <img src="/assets/img/home-03/gallery/gal-5.jpg" alt="Slide 5" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-1.jpg" alt="Slide 1" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-2.jpg" alt="Slide 2" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-3.jpg" alt="Slide 3" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-4.jpg" alt="Slide 4" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-5.jpg" alt="Slide 5" className="gallery-image" />
         </div>
       </div>
 
@@ -52,10 +52,11 @@ const GallerySlider = () => {
       <div className="absolute bottom-0 left-0 w-full z-50 flex justify-center items-center pointer-events-none">
         <img
           className="bg-no-repeat w-full h-auto"
-          src="/assets/img/home-03/gallery/gal-shape-2.png"
+          src="/assets/img/gallery/gal-shape-2.png"
           alt="Decorative Shape Bottom"
         />
       </div>
+
     </div>
   );
 };

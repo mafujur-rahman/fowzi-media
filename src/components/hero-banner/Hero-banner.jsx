@@ -80,7 +80,7 @@ export default function HeroBanner() {
 
             {/* Hero Content */}
             <h2 ref={textRef} className="text-6xl lg:text-8xl font-bold" style={{ fontFamily: 'Glacial Indifference' }}>
-                <span>We're a <span className="text-[#FF0101]">high-end</span></span> <br /> <span><span className="text-[#FF0101]">digital</span> agency</span>
+                <span>Elevating  <span className="text-[#FF0101]">brands</span> with</span> <br /> <span><span className="text-[#FF0101]">digital</span> solutions</span>
             </h2>
 
             {/* Subtext */}
@@ -96,7 +96,7 @@ export default function HeroBanner() {
                   style={{ fontFamily: "Glacial Indifference" }}
                   href={"/about-us"}
                 >
-                  Hire Us
+                  Let's Work <br /> Together
                   <p className="bg-white p-2 ml-2 rounded-full border-opacity-50 text-black">
                     <TiArrowRightThick />
                   </p>

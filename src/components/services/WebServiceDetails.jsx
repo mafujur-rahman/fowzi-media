@@ -117,10 +117,10 @@ const WebDetails = () => {
 
                 <div ref={textRef} className='my-6 ml-20 md:mx-60 lg:mx-96 overflow-hidden'>
                     <p className="reveal-paragraph">
-                        Branding is essential to establish yourself in the market in a unique and permanent way. At Riveal, we attach great importance. We seek to understand your business to better convey your values ​​and your talent through your brand image.
+                    A strong online presence is essential to establish your brand in a unique and lasting way. At Riveal, we prioritize creating websites that truly represent your business, effectively communicating your values and expertise through intuitive and visually appealing designs.
                     </p>
                     <p className='my-6 reveal-paragraph'>
-                        Explore our achievements and let yourself be convinced!
+                    Explore our portfolio and see how we bring brands to life online!
                     </p>
                 </div>
 
@@ -155,24 +155,22 @@ const WebDetails = () => {
                             ref={PheadingRef}
                             className='text-2xl mb-6 leading-relaxed overflow-hidden'
                         >
-                            Your logo is at the heart of your identity. An impactful design, tailor-made and in line with your
-                            activity will allow you to differentiate yourself and mark your audience.
+                            A well-designed website not only looks great but also provides a seamless user experience that keeps visitors engaged and focused on their goals. Our team ensures your site is fast, responsive, and optimized for conversions.
                         </h3>
                         <p className='mb-6 text-gray-700 leading-relaxed'>
-                            Great user experience design lets users focus on the task they have to complete and evokes emotion
-                            without distracting them.
+                        Great website development ensures users stay focused on what they need to do, creating an experience that feels intuitive and engaging — without unnecessary distractions.
                         </p>
                         <ul className='list-disc pl-5 space-y-3 mb-6 text-gray-700'>
-                            <li>Graphic research and production</li>
-                            <li>Presentation of your logo on different media</li>
-                            <li>Advice on the graphic orientation of your logo or its redesign</li>
-                            <li>Delivery of your logo in professional formats</li>
+                            <li>Responsive and mobile-friendly development</li>
+                            <li>UI/UX optimization for an intuitive user experience</li>
+                            <li>SEO-friendly structure for better online visibility</li>
+                            <li>Integration of essential features and functionalities</li>
                         </ul>
                         <div className='md:flex gap-5'>
                             <img src="/assets/img/services/sv-details-2.webp" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
                             <img src="/assets/img/services/sv-details-3.webp" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
                         </div>
-                        <p className='mt-10'>Great user experience design lets users focus on the task they have to complete & evokes emotion without distracting them. Bonus points for when it also looks & feels aesthetically pleasing!</p>
+                        <p className='mt-10'>A great website ensures users can navigate effortlessly, engage meaningfully, and take action without distractions. Bonus points if it also delivers a stunning visual experience!</p>
                     </div>
 
                     {/* Right side */}
@@ -180,15 +178,14 @@ const WebDetails = () => {
                         <div className="bg-gray-100 p-8 rounded-xl shadow-md">
                             <div className='grid grid-cols-1 gap-4 mb-10'>
                                 <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>STRATEGY</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'>LOGO DESIGN</button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>LOGO DESIGN</button>
                                 <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>GRAPHIC IDENTITY</button>
                                 <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>WEB DESIGN</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>DEVELOPMENT</button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'>DEVELOPMENT</button>
                             </div>
-                            <h1 className="text-3xl font-extrabold text-black mb-4">LOGO DESIGN</h1>
+                            <h1 className="text-3xl font-extrabold text-black mb-4">DEVELOPMENT</h1>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                Your logo is at the heart of your identity. An impactful design, tailor-made and in line
-                                with your activity will allow you to differentiate yourself and mark your audience.
+                            Your website is at the core of your brand identity. A well-crafted, custom design aligned with your business will help you stand out and leave a lasting impression on your audience.
                             </p>
                             <button className="mt-8 py-2 px-6 rounded-2xl bg-black text-white hover:bg-transparent hover:border hover:border-gray-700 hover:text-black transition">
                                 <Link href={"/contact"}>Let's Talk</Link>

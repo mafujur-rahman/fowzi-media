@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image"; // Assuming you're using Next.js Image component
+import OurBrandingWorks from "./OurWorks";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -291,7 +293,7 @@ const ServicesMain = () => {
                                 <li>Brand Guidelines</li>
                             </ul>
                             <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                See Details →
+                                <Link href={"/service-details/branding-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>
@@ -322,8 +324,8 @@ const ServicesMain = () => {
                                 <li>E - Learning</li>
                                 <li>Custom Proactive Solutions</li>
                             </ul>
-                            <button className="mt-6 ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                See Details →
+                            <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
+                                <Link href={"/service-details/branding-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>
@@ -351,8 +353,8 @@ const ServicesMain = () => {
                                 <li>Product Demonstrations</li>
                                 <li>Testimonials & Interviews</li>
                             </ul>
-                            <button className="mt-6 ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                See Details →
+                            <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
+                                <Link href={"/service-details/branding-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>

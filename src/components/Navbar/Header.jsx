@@ -46,13 +46,13 @@ export default function Header() {
           <a href="#" onClick={() => handleScroll("about")}>ABOUT</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
-          <a href="#" onClick={() => handleScroll("portfolio")}>PORTFOLIO</a>
+          <a href="/portfolio" onClick={() => handleScroll("portfolio")}>PORTFOLIO</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
-          <a href="#" onClick={() => handleScroll("case-studies")}>CASE STUDIES</a>
+          <a href="/case-studies" onClick={() => handleScroll("case-studies")}>CASE STUDIES</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
-          <a href="#" onClick={() => handleScroll("contact")}>CONTACT</a>
+          <a href="/contact" onClick={() => handleScroll("contact")}>CONTACT</a>
         </li>
       </ul>
 

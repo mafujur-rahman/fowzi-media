@@ -1,7 +1,7 @@
 import './globals.css';
 import Header from "@/components/Navbar/Header";
 import Footer from "@/components/footer/Footer";
-
+import SmoothScroll from "@/hooks/use-scroll-smooth"; 
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +11,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` antialiased flex flex-col min-h-screen`} style={{ fontFamily: "'Glacial Indifference', sans-serif" }}>
+      <body className={`antialiased flex flex-col min-h-screen`} style={{ fontFamily: "'Glacial Indifference', sans-serif" }}>
+        <SmoothScroll /> {/* Ensure smooth scroll is active */}
         <nav>
           <Header />
         </nav>

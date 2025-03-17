@@ -1,39 +1,28 @@
-"use client"; // Ensure this file is client-side only
+"use client"; // Ensures this runs in the client-side
 
-import { gsap } from "gsap";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis"; // Ensure you've installed Lenis
 
-// ScrollSmoother is part of the gsap package, you need to register it first
-import { ScrollSmoother } from "gsap/all"; // You can use gsap/all to access all plugins
-
-gsap.registerPlugin(ScrollSmoother);
-
-export default function useScrollSmooth() {
-  const [isScrollSmooth, setIsScrollSmooth] = useState(true);
-
+export default function SmoothScroll() {
   useEffect(() => {
-    if (typeof window !== "undefined" && isScrollSmooth) {
-      const smoothWrapper = document.getElementById("smooth-wrapper");
-      const smoothContent = document.getElementById("smooth-content");
+    const lenis = new Lenis({
+      // Customize options as required
+      duration: 1.2,
+      easing: (t) => t,
+      smooth: true,
+    });
 
-      if (smoothWrapper && smoothContent) {
-        gsap.config({
-          nullTargetWarn: false,
-        });
-
-        // Create the ScrollSmoother instance
-        ScrollSmoother.create({
-          smooth: 2,
-          effects: true,
-          smoothTouch: 0.1,
-          normalizeScroll: false,
-          ignoreMobileResize: true,
-        });
-      }
+    function animate(time) {
+      lenis.raf(time);
+      requestAnimationFrame(animate);
     }
-  }, [isScrollSmooth]);
 
-  return {
-    setIsScrollSmooth,
-  };
+    requestAnimationFrame(animate);
+
+    return () => {
+      lenis.destroy(); // Cleanup on component unmount
+    };
+  }, []);
+
+  return null;
 }

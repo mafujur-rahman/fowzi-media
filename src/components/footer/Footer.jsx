@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         {/* Center Text */}
-        <div className="md:mt-28 lg:w-1/3" >
+        <div className="md:mt-28 lg:w-1/3 mb-10" >
           <h1 className="text-3xl mb-8">Information</h1>
           <ul className=" text-gray-300 cursor-pointer">
             <li><a className="text-xl mb-2">Home</a></li>
@@ -47,7 +47,7 @@ const Footer = () => {
 
 
         {/* Center Text */}
-        <div className="md:mt-28 lg:w-1/3" >
+        <div className="md:mt-28 lg:w-1/3 mb-10" >
           <h1 className="text-3xl mb-8">Help Center</h1>
           <ul className=" text-gray-300 cursor-pointer">
             <li><a className="text-xl mb-2">Supports</a></li>
@@ -58,7 +58,7 @@ const Footer = () => {
 
 
         {/* Contact Information */}
-        <div className="md:mt-28 lg:w-1/3">
+        <div className="md:mt-28 lg:w-1/3 mb-10">
           <h1 className="text-3xl mb-8">Opening Hours</h1>
           <ul className="text-gray-300">
             <li><a className="text-xl mb-2">Monday - Thursday</a></li>

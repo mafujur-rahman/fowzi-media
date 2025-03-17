@@ -131,7 +131,7 @@ export default function AboutUsArea() {
             </div>
 
             {/*  Overlapping Image with Animation */}
-            <div ref={image2Ref} className="absolute -right-3 bottom-40 md:-right-10 md:bottom-10 lg:-right-10 lg:-bottom-40 w-2/3 md:w-1/2 lg:w-auto z-20">
+            <div ref={image2Ref} className="absolute -right-3 bottom-72 md:-right-10 md:bottom-10 lg:-right-10 lg:-bottom-40 w-2/3 md:w-1/2 lg:w-auto z-20">
               <Image
                 src={ab_3}
                 alt="about-img-3"

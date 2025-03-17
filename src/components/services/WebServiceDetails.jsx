@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image'; // ✅ Correctly importing Image
-import OurBrandingWorks from '@/components/services/OurWorks';
 import gsap from 'gsap';
 import Link from 'next/link';
+import WebService from './WebServiceWork';
 
-const BrandingDetails = () => {
+const WebDetails = () => {
 
     // top text animation
     const textContainer = useRef(null);
@@ -109,9 +109,8 @@ const BrandingDetails = () => {
                         <span className="inline-block reveal-text">Design Studio</span>
                     </p>
                     <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
-                        <span className="inline-block reveal-text mr-3">Logo</span>
-                        <span className="inline-block reveal-text mr-3">and</span>
-                        <span className="inline-block reveal-text">branding</span>
+                        <span className="inline-block reveal-text mr-3">Website</span>
+                        <span className="inline-block reveal-text">Development</span>
                     </h2>
                 </div>
 
@@ -138,7 +137,7 @@ const BrandingDetails = () => {
                         }}
                     >
                         <Image
-                            src="/assets/img/services/sv-details-1.webp"
+                            src="/assets/img/services/website-service.jpg"
                             alt="about-img-1"
                             className="w-full h-full object-cover"
                             fill // ✅ Use "fill" instead of layout="fill" (Next.js 13+)
@@ -206,7 +205,7 @@ const BrandingDetails = () => {
                     <img className="w-5 h-5" src="/assets/img/logo/icon 2.png" alt="" />
                     <h4 className="text-[#FF0101] text-3xl font-semibold">Our Works</h4>
                 </div>
-                <OurBrandingWorks />
+                <WebService />
             </div>
 
             {/* Get in touch */}
@@ -238,4 +237,4 @@ const BrandingDetails = () => {
     );
 };
 
-export default BrandingDetails;
+export default WebDetails;

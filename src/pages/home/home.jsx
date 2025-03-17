@@ -8,6 +8,7 @@ import TalkSection from "@/components/talk-section/TalkSection";
 import VideoSection from "@/components/video-section/VideoSection";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 import OurServices from "@/components/services/OurServices";
+import CaseStudies from "@/components/case-studies/CaseStudies";
 
 const HomeMain = () => {
   return (
@@ -36,6 +37,10 @@ const HomeMain = () => {
         {/* creative studio section start */}
         <OurServices />
         {/* creative studio section end */}
+
+        {/* case studies section start */}
+        <CaseStudies />
+        {/* case studies section end */}
 
         {/* talk section start */}
         <TalkSection />

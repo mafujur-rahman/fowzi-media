@@ -5,32 +5,41 @@ import '../WhatWeDo/rotateImage.css';
 
 const TalkSection = () => {
   useEffect(() => {
-    // Wave bounce animation for both texts
-    gsap.to(".wave-bounce", {
+    // Function to split text into individual characters and wrap them in spans
+    const splitText = (element) => {
+      const text = element.innerText;
+      // Wrap each character in a span with the 'char' class
+      element.innerHTML = text.split('').map(char => `<span class="char">${char}</span>`).join('');
+    };
+
+    // Apply the splitText function to the specific text elements
+    const elements = document.querySelectorAll('.wave-bounce');
+    elements.forEach((element) => {
+      splitText(element);
+    });
+
+    // Apply the GSAP animation for wave bounce on all elements with the class '.char'
+    gsap.to('.char', {
       y: -20,
       repeat: -1,
       yoyo: true,
       duration: 0.6,
-      ease: "ease.inOut",
-      stagger: 0.3,  
+      ease: 'power1.inOut',
+      stagger: 0.1, // Stagger the animation to create the wave effect
     });
 
-    // Gradient purple color change every 3 seconds for both texts
-    const purpleGradientColors = ["#FFFF", "#FF0101"];  
+    // Gradient color change every 3 seconds for gradient-text elements
+    const gradientColors = ["#FFFF", "#FF0101"];
     let index = 0;
     setInterval(() => {
       gsap.to(".gradient-text", {
-        color: purpleGradientColors[index],
+        color: gradientColors[index],
         duration: 1,
       });
-      index = (index + 1) % purpleGradientColors.length;
+      index = (index + 1) % gradientColors.length;
     }, 3000);
+
   }, []);
-
- 
-
-
-
 
   return (
     <div className="bg-[#1E1E1E] text-white py-16 px-8 text-center w-full">
@@ -61,11 +70,11 @@ const TalkSection = () => {
             </button>
           </div>
 
-
           <div className="flex-1">
             {/* Text with gradient animation and wave bounce */}
             <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold text-white mb-4 wave-bounce gradient-text" style={{ fontFamily: 'Glacial Indifference' }}>
-              about it
+              {/* Apply wave bounce and gradient-text to 'about it' */}
+              <span className="wave-bounce">about it</span>
             </h1>
             <p className="mt-4 text-lg sm:text-xl" style={{ fontFamily: 'Glacial Indifference' }}>
               We will collaborate to find the right answer and bring progress <br />

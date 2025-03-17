@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const OurBrandingWorks = () => {
+const WebService = () => {
     const sliderRef = useRef(null);
     const isDragging = useRef(false);
     const startX = useRef(0);
@@ -176,4 +176,4 @@ const OurBrandingWorks = () => {
     );
 };
 
-export default OurBrandingWorks;
+export default WebService;

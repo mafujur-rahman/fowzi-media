@@ -3,8 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image"; // Assuming you're using Next.js Image component
-import OurBrandingWorks from "./OurWorks";
+import Image from "next/image";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -293,7 +292,7 @@ const ServicesMain = () => {
                                 <li>Brand Guidelines</li>
                             </ul>
                             <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                <Link href={"/service-details/branding-service"}>See Details →</Link>
+                                <Link href={"/services/branding-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>
@@ -325,7 +324,7 @@ const ServicesMain = () => {
                                 <li>Custom Proactive Solutions</li>
                             </ul>
                             <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                <Link href={"/service-details/branding-service"}>See Details →</Link>
+                                <Link href={"/services/web-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>
@@ -354,7 +353,7 @@ const ServicesMain = () => {
                                 <li>Testimonials & Interviews</li>
                             </ul>
                             <button className="mt-6 lg:ml-32  px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-[#FF0101] transition">
-                                <Link href={"/service-details/branding-service"}>See Details →</Link>
+                                <Link href={"/services/video-service"}>See Details →</Link>
                             </button>
                         </div>
                     </div>

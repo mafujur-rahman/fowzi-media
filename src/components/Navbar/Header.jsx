@@ -49,7 +49,7 @@ export default function Header() {
           <a href="/portfolio" onClick={() => handleScroll("portfolio")}>PORTFOLIO</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
-          <a href="/case-studies" onClick={() => handleScroll("case-studies")}>CASE STUDIES</a>
+          <a href="#" onClick={() => handleScroll("case-studies")}>CASE STUDIES</a>
         </li>
         <li className="text-lg p-3 cursor-pointer">
           <a href="/contact" onClick={() => handleScroll("contact")}>CONTACT</a>

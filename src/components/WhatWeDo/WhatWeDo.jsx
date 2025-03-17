@@ -77,7 +77,6 @@ const WhatWeDo = () => {
     <div id="about" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2
-          ref={titleRef}
           className="text-2xl font-bold mb-8 text-[#FF0101]"
           style={{ fontFamily: "Glacial Indifference" }}
         >

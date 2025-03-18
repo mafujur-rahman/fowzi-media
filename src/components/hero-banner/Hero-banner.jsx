@@ -89,20 +89,20 @@ export default function HeroBanner() {
             </p>
 
             {/* Button */}
-            <div className="mt-8 text-center justify-center">
-              <button>
+            <div className="mt-8 text-center justify-center relative z-10">
                 <Link
-                  className="px-8 py-3 bg-black text-white rounded-full text-lg shadow-lg hover:bg-[#FF0101] transition-all justify-center flex items-center"
-                  style={{ fontFamily: "Glacial Indifference" }}
-                  href={"/about-us"}
+                    className="px-8 py-3 bg-black text-white rounded-full text-lg shadow-lg hover:bg-[#FF0101] transition-all justify-center flex items-center"
+                    href={"/contact"}
+                    style={{ fontFamily: "Glacial Indifference" }}
                 >
-                  Let's Work <br /> Together
-                  <p className="bg-white p-2 ml-2 rounded-full border-opacity-50 text-black">
-                    <TiArrowRightThick />
-                  </p>
+                    Let's Work <br /> Together
+                    <p className="bg-white p-2 ml-2 rounded-full border-opacity-50 text-black">
+                        <TiArrowRightThick />
+                    </p>
                 </Link>
-              </button>
             </div>
+
+
         </section>
     );
 }

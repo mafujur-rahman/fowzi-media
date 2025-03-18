@@ -41,9 +41,9 @@ const GallerySlider = () => {
         <div ref={sliderRef} className="flex w-fit h-full bg-cover">
           {/* Gallery Images */}
           <img src="/assets/img/gallery/slide-1.jpg" alt="Slide 1" className="gallery-image" />
-          <img src="/assets/img/gallery/slide-2.jpg" alt="Slide 2" className="gallery-image" />
-          <img src="/assets/img/gallery/slide-3.jpg" alt="Slide 3" className="gallery-image" />
-          <img src="/assets/img/gallery/slide-4.jpg" alt="Slide 4" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-2.png" alt="Slide 2" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-3.png" alt="Slide 3" className="gallery-image" />
+          <img src="/assets/img/gallery/slide-4.jpeg" alt="Slide 4" className="gallery-image" />
           <img src="/assets/img/gallery/slide-5.jpg" alt="Slide 5" className="gallery-image" />
         </div>
       </div>

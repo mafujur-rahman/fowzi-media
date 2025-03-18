@@ -108,9 +108,7 @@ const BrandingDetails = () => {
                     <p className="font-semibold overflow-hidden">
                         <span className="inline-block reveal-text">Design Studio</span>
                     </p>
-                    <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
-                        <span className="inline-block reveal-text mr-3">Logo</span>
-                        <span className="inline-block reveal-text mr-3">and</span>
+                    <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4 pb-3">
                         <span className="inline-block reveal-text">branding</span>
                     </h2>
                 </div>
@@ -156,40 +154,35 @@ const BrandingDetails = () => {
                             ref={PheadingRef}
                             className='text-2xl mb-6 leading-relaxed overflow-hidden'
                         >
-                            Your logo is at the heart of your identity. An impactful design, tailor-made and in line with your
-                            activity will allow you to differentiate yourself and mark your audience.
+                            Your brand is the essence of your identity. A strong, tailored branding strategy sets you apart, resonates with your audience, and creates a lasting impact.
                         </h3>
                         <p className='mb-6 text-gray-700 leading-relaxed'>
-                            Great user experience design lets users focus on the task they have to complete and evokes emotion
-                            without distracting them.
+                        Effective branding creates an experience that allows users to focus on their goals while evoking emotion, all without causing distractions.
                         </p>
                         <ul className='list-disc pl-5 space-y-3 mb-6 text-gray-700'>
-                            <li>Graphic research and production</li>
-                            <li>Presentation of your logo on different media</li>
-                            <li>Advice on the graphic orientation of your logo or its redesign</li>
-                            <li>Delivery of your logo in professional formats</li>
+                            <li>Graphic research and creation</li>
+                            <li>Showcasing your brand across various media</li>
+                            <li>Expert guidance on the graphic direction of your brand or its redesign</li>
+                            <li>Delivery of your brand assets in professional formats</li>
                         </ul>
                         <div className='md:flex gap-5'>
-                            <img src="/assets/img/services/sv-details-2.webp" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
-                            <img src="/assets/img/services/sv-details-3.webp" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
+                            <img src="/assets/img/branding/betterhand community/branding mockup/logo mockup/logo.png" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
+                            <img src="/assets/img/branding/radiant future/branding mockup/logo mockup/logo.png" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
                         </div>
-                        <p className='mt-10'>Great user experience design lets users focus on the task they have to complete & evokes emotion without distracting them. Bonus points for when it also looks & feels aesthetically pleasing!</p>
+                        <p className='mt-10'>Great branding enables users to focus on their goals while evoking emotion, all without distractions. Extra points when it’s not only effective but also visually appealing and emotionally engaging!</p>
                     </div>
 
                     {/* Right side */}
                     <div className="flex-1 w-full max-w-lg">
                         <div className="bg-gray-100 p-8 rounded-xl shadow-md">
                             <div className='grid grid-cols-1 gap-4 mb-10'>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>STRATEGY</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'>LOGO DESIGN</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>GRAPHIC IDENTITY</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>WEB DESIGN</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>DEVELOPMENT</button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'><Link href={'/services/branding-service'}>BRANDING</Link></button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'><Link href={'/services/web-service'}>DEVELOPMENT</Link></button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'><Link href={'/services/video-service'}>VIDEOGRAPHY</Link></button>
                             </div>
-                            <h1 className="text-3xl font-extrabold text-black mb-4">LOGO DESIGN</h1>
+                            <h1 className="text-3xl font-extrabold text-black mb-4">BRANDING</h1>
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                Your logo is at the heart of your identity. An impactful design, tailor-made and in line
-                                with your activity will allow you to differentiate yourself and mark your audience.
+                            Branding is the core of your identity. A powerful, custom-crafted design that reflects your business will set you apart and create a memorable connection with your audience.
                             </p>
                             <button className="mt-8 py-2 px-6 rounded-2xl bg-black text-white hover:bg-transparent hover:border hover:border-gray-700 hover:text-black transition">
                                 <Link href={"/contact"}>Let's Talk</Link>

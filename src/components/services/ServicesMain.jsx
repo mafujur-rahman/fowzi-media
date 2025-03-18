@@ -194,7 +194,7 @@ const ServicesMain = () => {
                     }}
                 >
                     <Image
-                        src="/assets/img/services/hero-1.webp"
+                        src="/assets/img/services/services-banner.jpg"
                         alt="about-img-1"
                         className="w-full h-full object-cover"
                         layout="fill"
@@ -223,7 +223,7 @@ const ServicesMain = () => {
                     {/* Branding */}
                     <div className="my-8 service-item">
                         <img
-                            src="/assets/img/services/brand-icon.webp"
+                            src="/assets/img/services/branding-icon.png"
                             alt="Branding"
                             className="w-16 h-16 mb-5"
                         />
@@ -237,7 +237,7 @@ const ServicesMain = () => {
                     {/* Website */}
                     <div className="my-8 service-item">
                         <img
-                            src="/assets/img/services/web-icon.webp"
+                            src="/assets/img/services/web-icon.png"
                             alt="Website"
                             className="w-16 h-16 mb-5"
                         />
@@ -278,7 +278,7 @@ const ServicesMain = () => {
                         {/* Content Section */}
                         <div className="md:w-1/2 p-8 md:mt-10 md:ml-10">
                             <h2 className="text-xl font-semibold text-gray-300">01 &mdash;&mdash; Design Studio</h2>
-                            <h3 className="text-5xl font-bold mt-2 text-white">Logos and branding</h3>
+                            <h3 className="text-5xl font-bold mt-2 text-white">Branding</h3>
                             <p className="mt-6 lg:pl-32 text-gray-300">
                                 At Fowzi Media, we specialize in crafting captivating brand identities that resonate with your audience and leave a lasting impression. From logo design to website development, our comprehensive branding services are designed to propel your business forward and help you stand out in a crowded marketplace.
                             </p>
@@ -307,7 +307,7 @@ const ServicesMain = () => {
                         </figure>
                         {/* Content Section */}
                         <div className="md:w-1/2 p-8 md:mt-10 md:ml-10">
-                            <h2 className="text-xl font-semibold text-gray-300">02 &mdash;&mdash; Design Studio</h2>
+                            <h2 className="text-xl font-semibold text-gray-300">02 &mdash;&mdash; Development Studio</h2>
                             <h3 className="text-5xl font-bold mt-2 text-white">Web Development</h3>
                             <p className="mt-6 lg:pl-32 text-gray-300">
                                 Transform your online presence with Fowzi Media expert website development services. We specialize in creating stunning websites that captivate your audience and drive results. With our streamlined process and personalized approach, achieving your online goals has never been easier.
@@ -339,7 +339,7 @@ const ServicesMain = () => {
                         </figure>
                         {/* Content Section */}
                         <div className="md:w-1/2 p-8 md:mt-10 md:ml-10">
-                            <h2 className="text-xl font-semibold text-gray-300">03 &mdash;&mdash; Design Studio</h2>
+                            <h2 className="text-xl font-semibold text-gray-300">03 &mdash;&mdash; Video Studio</h2>
                             <h3 className="text-5xl font-bold mt-2 text-white">Videography</h3>
                             <p className="mt-6 lg:pl-32 text-gray-300">
                                 Elevate your brand with captivating video content that tells your story and engages your audience. Fowzi Media specializes in professional videography services that bring your vision to life and leave a lasting impression. From corporate videos to promotional content, we're here to help you stand out in a crowded digital landscape.

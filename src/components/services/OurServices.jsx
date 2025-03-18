@@ -46,7 +46,7 @@ const OurServices = () => {
 
 
     return (
-        <div id='services' className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 {/* Main Heading */}
                 <p className="text-xl text-[#FF0101] mb-8" style={{ fontFamily: 'Glacial Indifference' }}>(  Our Services  )</p>
@@ -67,7 +67,7 @@ const OurServices = () => {
                 {/* Divider */}
                 <hr className="my-12 border-gray-200" />
 
-                {/* Product Design Section */}
+                {/* branding Section */}
                 <div className="mb-12 flex flex-col sm:flex-row justify-between sm:space-x-8">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Branding</h2>
                     <div className="flex flex-col sm:flex-row sm:space-x-4">
@@ -88,7 +88,7 @@ const OurServices = () => {
                         className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                       <Link href={'/services'}> See <br /> Details <br />
+                       <Link href={'/services/branding-service'}> See <br /> Details <br />
                        <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>
@@ -117,7 +117,7 @@ const OurServices = () => {
                         className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                       <Link href={'/services'}> See <br /> Details <br />
+                       <Link href={'/services/web-service'}> See <br /> Details <br />
                        <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>
@@ -125,7 +125,7 @@ const OurServices = () => {
                 {/* Divider */}
                 <hr className="my-12 border-gray-200" />
 
-                {/* Consulting Section */}
+                {/* videography Section */}
                 <div className='flex flex-col sm:flex-row justify-between sm:space-x-8'>
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Glacial Indifference' }}>Videography</h2>
                     <div className="flex flex-col sm:flex-row sm:space-x-4">
@@ -146,7 +146,7 @@ const OurServices = () => {
                         className="mt-6 sm:mt-0 border border-gray-300 rounded-full p-4 text-center text-lg flex flex-col items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl  hover:bg-[#FF0101] hover:text-white"
                         style={{ fontFamily: "Glacial Indifference" }}
                     >
-                       <Link href={'/services'}> See <br /> Details <br />
+                       <Link href={'/services/video-service'}> See <br /> Details <br />
                        <TiArrowRightThick className="text-2xl mt-1" /></Link>
                     </button>
                 </div>

@@ -106,7 +106,7 @@ const VideoDetails = () => {
             <div>
                 <div ref={textContainer} className="overflow-hidden">
                     <p className="font-semibold overflow-hidden">
-                        <span className="inline-block reveal-text">Design Studio</span>
+                        <span className="inline-block reveal-text">Video Studio</span>
                     </p>
                     <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
                         <span className="inline-block reveal-text mr-3">Videography</span>
@@ -176,11 +176,10 @@ const VideoDetails = () => {
                     <div className="flex-1 w-full max-w-lg">
                         <div className="bg-gray-100 p-8 rounded-xl shadow-md">
                             <div className='grid grid-cols-1 gap-4 mb-10'>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>STRATEGY</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>LOGO DESIGN</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'>VIDEOGRAPHY</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>WEB DESIGN</button>
-                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'>DEVELOPMENT</button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'><Link href={'/services/branding-service'}>BRANDING</Link></button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border border-gray-700 hover:bg-black hover:text-white transition'><Link href={'/services/web-service'}>DEVELOPMENT</Link></button>
+                                <button className='rounded-3xl w-fit py-3 px-5 border bg-black text-white border-gray-700'><Link href={'/services/video-service'}>VIDEOGRAPHY</Link></button>
+
                             </div>
                             <h1 className="text-3xl font-extrabold text-black mb-4">VIDEOGRAPHY</h1>
                             <p className="text-lg text-gray-700 leading-relaxed">

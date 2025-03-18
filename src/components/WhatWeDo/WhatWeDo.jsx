@@ -92,9 +92,8 @@ const WhatWeDo = () => {
             <span
               key={index}
               ref={addToSubtitleRef}
-              className={`${
-                word === "Fowzi" || word === "Media" ? "text-[#FF0101]" : ""
-              } inline-block`}
+              className={`${word === "Fowzi" || word === "Media" ? "text-[#FF0101]" : ""
+                } inline-block`}
             >
               {word}
             </span>
@@ -120,7 +119,7 @@ const WhatWeDo = () => {
               marketing, and communications, we excel in creating compelling narratives,
               captivating audiences, and driving success for your business.
             </p>
-            <div className="mt-8 text-center justify-center">
+            <div className="mt-8">
               <button>
                 <Link
                   className="px-8 py-3 bg-black text-white rounded-full text-lg shadow-lg hover:bg-[#FF0101] transition-all justify-center flex items-center"
@@ -138,20 +137,21 @@ const WhatWeDo = () => {
         </div>
 
         {/* INFINITE SCROLLING SLIDER */}
-        <div className="slider-container mt-14">
-          <div className="image-slider" ref={sliderRef}>
-            {[...Array(2)].map((_, i) => (
-              <React.Fragment key={i}>
-                <img src="/tONe.png" alt="brand-1" />
-                <img src="/tChair.png" alt="brand-2" />
-                <img src="/tRisingImpact.png" alt="brand-3" />
-                <img src="/trustedLogoFour.png" alt="brand-4" />
-                <img src="/trustedLogoThree.png" alt="brand-5" />
-                <img src="/trustedLogoSeven.png" alt="brand-6" />
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
+        <div className="slider-container">
+  <div className="image-slider" ref={sliderRef}>
+    {[...Array(2)].map((_, i) => (
+      <React.Fragment key={i}>
+        <div className="image-wrapper"><img src="/tONe.png" alt="brand-1" /></div>
+        <div className="image-wrapper"><img src="/tChair.png" alt="brand-2" /></div>
+        <div className="image-wrapper"><img src="/tRisingImpact.png" alt="brand-3" /></div>
+        <div className="image-wrapper"><img src="/trustedLogoFour.png" alt="brand-4" /></div>
+        <div className="image-wrapper"><img src="/trustedLogoThree.png" alt="brand-5" /></div>
+        <div className="image-wrapper"><img src="/trustedLogoSeven.png" alt="brand-6" /></div>
+      </React.Fragment>
+    ))}
+  </div>
+</div>
+
       </div>
     </div>
   );

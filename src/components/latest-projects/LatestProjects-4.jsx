@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./LatestProjects.css"; 
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,13 +61,13 @@ const LatestProjects4 = () => {
         {/* Images */}
         <img
           ref={image1Ref}
-          src="/assets/img/home-03/portfolio/port-7.jpg"
+          src="/assets/img/branding/radiant future/branding mockup/logo mockup/logo.png"
           alt="Project 1"
           className="absolute top-0 left-0 w-2/5 rounded-2xl h-4/5 object-cover z-20 " 
         />
         <img
           ref={image2Ref}
-          src="/assets/img/home-03/portfolio/port-8.jpg"
+          src="/assets/img/branding/radiant future/branding mockup/evelope mockup/envelope.png"
           alt="Project 2"
           className="absolute top-0 right-0 w-2/5 h-4/5 rounded-2xl object-cover z-20" 
         />
@@ -76,10 +77,10 @@ const LatestProjects4 = () => {
           ref={textRef}
           className="absolute text-center text-white z-0 px-6 py-4 rounded-lg"
         >
-          <h2 className="text-xl mb-16">SEP 2024 - CREATIVE</h2>
-          <p className="text-6xl font-bold mb-10">Travel <br /> explore</p>
+          <h2 className="text-xl mb-16">SEP 2024 - BRANDING</h2>
+          <p className="text-6xl font-bold mb-10">Radiant <br /> Future</p>
           <button className="hover:bg-white border border-gray-400 hover:text-black py-2 px-6 rounded-2xl  transition duration-300">
-            SEE PROJECT
+            <Link href={'/branding/radiant-future'}>SEE PROJECT</Link>
           </button>
           <p className="mt-16 h-2 border-0 bg-gradient-to-r from-red-500 to-red-700 rounded-2xl"></p>
 

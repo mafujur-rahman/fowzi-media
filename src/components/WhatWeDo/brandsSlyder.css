@@ -1,27 +1,36 @@
-
 .slider-container {
-    width: 100%;
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px 0; 
-  }
-  
-  /* Slider styles */
-  .image-slider {
-    display: flex;
-    width: max-content;
-    animation: slide 15s linear infinite;
-  }
-  
-  .image-slider img {
-    width: 250px; 
-    height: auto;
-    margin-right: 30px; 
-    object-fit: contain; 
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end; /* Ensures images align at the bottom */
+  position: relative;
+}
+
+.image-slider {
+  display: flex;
+  gap: 30px; /* Space between images */
+  align-items: flex-end; /* Aligns all images to the bottom */
+  position: relative;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: flex-end; /* Forces all images to the bottom */
+  justify-content: center; /* Centers horizontally if needed */
+  height: 150px; /* Set a fixed height for consistency */
+}
+
+.image-wrapper img {
+  display: block;
+  height: auto;
+  max-height: 100px; /* Set a limit to ensure images fit within container */
+  object-fit: contain;
+  position: relative;
+}
+
+
+
+
   
   /* Animation to slide images from right to left */
   @keyframes slide {

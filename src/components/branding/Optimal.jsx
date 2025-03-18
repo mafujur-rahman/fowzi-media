@@ -2,11 +2,10 @@
 
 import gsap from "gsap";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import {  useEffect, useRef } from "react";
 
 const Optimal = () => {
-    const [scrollPos, setScrollPos] = useState(0);
-    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
     const textRef = useRef(null);
 
 
@@ -19,19 +18,7 @@ const Optimal = () => {
         );
     }, []);
 
-    // Scroll handler to update position
-    const handleScroll = () => {
-        setScrollPos(window.scrollY);
-    };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    // Limit image movement within boundaries (-max, +max)
-    const maxMove = 150;
-    const move = Math.max(-maxMove, Math.min(maxMove, (scrollPos - 500) * 0.3));
 
     // process step
     const steps = [
@@ -43,42 +30,13 @@ const Optimal = () => {
         { number: "06", title: "Delivery" },
     ];
 
-    // testimonial
-    const testimonials = [
-        {
-            name: "Liban Yasin",
-            message: "They provided me with a high quality work for a friendly price and responded to feedback in a timely way. I will highly recommend using Fowzi Media's services. A very satisfied client. Thanks",
-            image: "https://via.placeholder.com/100",
-        },
-        {
-            name: "John Doe",
-            message: "Amazing service! The team was professional, and the final results exceeded my expectations. I will definitely be back for more.",
-            image: "https://via.placeholder.com/100",
-        },
-        {
-            name: "Jane Smith",
-            message: "I loved the creativity and attention to detail. The whole experience was seamless and enjoyable!",
-            image: "https://via.placeholder.com/100",
-        },
-    ];
-
-    const prevTestimonial = () => {
-        setCurrentTestimonial((prev) =>
-            prev === 0 ? testimonials.length - 1 : prev - 1
-        );
-    };
-
-    const nextTestimonial = () => {
-        setCurrentTestimonial((prev) =>
-            prev === testimonials.length - 1 ? 0 : prev + 1
-        );
-    };
+    
 
     return (
         <div className="container mx-auto">
             <div className="my-8">
                 <h2 ref={textRef} className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
-                    <span className="inline-block reveal-text mr-3">Optimal</span>
+                    <span className="inline-block reveal-text mr-3">Optimal Home HealthCare</span>
                 </h2>
             </div>
 
@@ -90,9 +48,6 @@ const Optimal = () => {
                 {/* Moving Image */}
                 <div
                     className="absolute top-0 left-0 w-full h-full transition-transform duration-100 ease-out"
-                    style={{
-                        transform: `translateY(${move}px)`,
-                    }}
                 >
                     <Image
                         src="/assets/img/branding/optimal/branding mockup/business card mockup/business card@2x.png"

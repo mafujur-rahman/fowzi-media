@@ -1,6 +1,26 @@
 import React from 'react';
 
 const Testimonial = () => {
+
+        // testimonial
+        const testimonials = [
+            {
+                name: "Liban Yasin",
+                message: "They provided me with a high quality work for a friendly price and responded to feedback in a timely way. I will highly recommend using Fowzi Media's services. A very satisfied client. Thanks",
+                image: "https://via.placeholder.com/100",
+            },
+            {
+                name: "John Doe",
+                message: "Amazing service! The team was professional, and the final results exceeded my expectations. I will definitely be back for more.",
+                image: "https://via.placeholder.com/100",
+            },
+            {
+                name: "Jane Smith",
+                message: "I loved the creativity and attention to detail. The whole experience was seamless and enjoyable!",
+                image: "https://via.placeholder.com/100",
+            },
+        ];
+    
     return (
         <div>
              {/* testimonial */}

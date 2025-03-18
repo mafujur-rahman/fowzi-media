@@ -110,7 +110,7 @@ const WebDetails = () => {
                     </p>
                     <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
                         <span className="inline-block reveal-text mr-3">Website</span>
-                        <span className="inline-block reveal-text">Development</span>
+                        <span className="inline-block reveal-text text-[#FF0101]">Development</span>
                     </h2>
                 </div>
 
@@ -167,8 +167,8 @@ const WebDetails = () => {
                             <li>Integration of essential features and functionalities</li>
                         </ul>
                         <div className='md:flex gap-5'>
-                            <img src="/assets/img/services/sv-details-2.webp" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
-                            <img src="/assets/img/services/sv-details-3.webp" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
+                            <img src="/assets/img/services/web-development-company-1-2022.jpg" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
+                            <img src="/assets/img/services/website-development-process.jpg" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
                         </div>
                         <p className='mt-10'>A great website ensures users can navigate effortlessly, engage meaningfully, and take action without distractions. Bonus points if it also delivers a stunning visual experience!</p>
                     </div>

@@ -13,7 +13,7 @@ const BrandingService = () => {
         { name: "Better Hand", link: "/branding/better-hand", img: "/assets/img/branding/betterhand community/branding mockup/logo mockup/logo.png" },
         { name: "Radiant Future", link: "/branding/radiant-future", img: "/assets/img/branding/radiant future/branding mockup/logo mockup/logo.png" },
         { name: "Friday Fashion", link: "/branding/friday-fashion", img: "/assets/img/branding/friday fashion/branding/logo mokcup/logo mockup.png" },
-        { name: "Optimal", link: "/branding/optimal", img: "/assets/img/branding/optimal/branding mockup/business card mockup/business card@2x.png" },
+        { name: "Optimal Home HealthCare", link: "/branding/optimal", img: "/assets/img/branding/optimal/branding mockup/business card mockup/business card@2x.png" },
     ];
 
     useEffect(() => {

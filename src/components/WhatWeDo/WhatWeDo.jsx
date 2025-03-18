@@ -64,14 +64,25 @@ const WhatWeDo = () => {
   }, []);
 
   // Infinite scrolling animation
-  useGSAP(() => {
-    gsap.to(sliderRef.current, {
-      x: "-50%",
-      duration: 10,
-      repeat: -1,
-      ease: "linear",
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const images = Array.from(slider.children);
+
+    if (images.length === 0) return;
+
+    // Duplicate images dynamically to create an infinite loop
+    images.forEach((img) => {
+      const clone = img.cloneNode(true);
+      slider.appendChild(clone);
     });
-  });
+
+    gsap.to(slider, {
+      x: "-50%",
+      duration: 50,
+      ease: "linear",
+      repeat: -1,
+    });
+  }, []);
 
   return (
     <div id="about" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
@@ -138,19 +149,18 @@ const WhatWeDo = () => {
 
         {/* INFINITE SCROLLING SLIDER */}
         <div className="slider-container">
-  <div className="image-slider" ref={sliderRef}>
-    {[...Array(2)].map((_, i) => (
-      <React.Fragment key={i}>
-        <div className="image-wrapper"><img src="/tONe.png" alt="brand-1" /></div>
-        <div className="image-wrapper"><img src="/tChair.png" alt="brand-2" /></div>
-        <div className="image-wrapper"><img src="/tRisingImpact.png" alt="brand-3" /></div>
-        <div className="image-wrapper"><img src="/trustedLogoFour.png" alt="brand-4" /></div>
-        <div className="image-wrapper"><img src="/trustedLogoThree.png" alt="brand-5" /></div>
-        <div className="image-wrapper"><img src="/trustedLogoSeven.png" alt="brand-6" /></div>
-      </React.Fragment>
-    ))}
-  </div>
-</div>
+          <div className="image-slider" ref={sliderRef}>
+            
+                <div className="image-wrapper"><img src="/tONe.png" alt="brand-1" /></div>
+                <div className="image-wrapper"><img src="/tChair.png" alt="brand-2" /></div>
+                <div className="image-wrapper"><img src="/tRisingImpact.png" alt="brand-3" /></div>
+                <div className="image-wrapper"><img src="/trustedLogoFour.png" alt="brand-4" /></div>
+                <div className="image-wrapper"><img src="/trustedLogoThree.png" alt="brand-5" /></div>
+                <div className="image-wrapper"><img src="/trustedLogoSeven.png" alt="brand-6" /></div>
+
+           
+          </div>
+        </div>
 
       </div>
     </div>

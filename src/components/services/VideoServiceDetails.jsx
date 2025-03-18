@@ -109,7 +109,7 @@ const VideoDetails = () => {
                         <span className="inline-block reveal-text">Video Studio</span>
                     </p>
                     <h2 className="font-bold text-5xl md:text-7xl lg:text-8xl overflow-hidden mt-4">
-                        <span className="inline-block reveal-text mr-3">Videography</span>
+                        <span className="inline-block reveal-text mr-3 pb-8">Videography</span>
                     </h2>
                 </div>
 
@@ -166,8 +166,8 @@ const VideoDetails = () => {
                             <li>Delivery in multiple formats for various platforms</li>
                         </ul>
                         <div className='md:flex gap-5'>
-                            <img src="/assets/img/services/sv-details-2.webp" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
-                            <img src="/assets/img/services/sv-details-3.webp" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
+                            <img src="/assets/img/services/video-1 (1).jpg" alt="Design Sample 1" className='w-70 h-auto object-cover rounded-xl mb-4 md:mb-0' />
+                            <img src="/assets/img/services/video-1 (2).jpg" alt="Design Sample 2" className='w-70 h-auto object-cover rounded-xl' />
                         </div>
                         <p className='mt-10'>Great videography draws viewers in, keeps them focused on the story, and stirs emotion — all without unnecessary distractions. And when it’s beautifully shot and visually appealing? Even better!</p>
                     </div>

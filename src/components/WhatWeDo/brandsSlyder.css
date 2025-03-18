@@ -1,5 +1,4 @@
 .slider-container {
-  overflow: hidden;
   white-space: nowrap;
   display: flex;
   align-items: flex-end; /* Ensures images align at the bottom */
@@ -24,7 +23,6 @@
   display: block;
   height: auto;
   max-height: 100px; /* Set a limit to ensure images fit within container */
-  object-fit: contain;
   position: relative;
 }
 

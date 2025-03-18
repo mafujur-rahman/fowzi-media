@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const caseStudies = [
   {
     title: "Awad For Puntland",
+    link: "https://fowzimedia.com/awad.pdf",
     description:
       "Case study for Amb. Ahmed Isse Awad, Puntland Presidential Candidate, 2024.",
     image: "/assets/img/case-studies/blogOne.png",
@@ -45,7 +46,7 @@ const CaseStudies = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto py-24 px-5 sm:px-8 lg:px-20">
+    <div id="case-studies" className="max-w-7xl mx-auto py-24 px-5 sm:px-8 lg:px-20">
       <h1 className="text-black text-4xl md:text-5xl font-bold mb-16 ">
         Featured <span className="text-[#ff0101]">Case Studies</span>
       </h1>
@@ -75,21 +76,9 @@ const CaseStudies = () => {
               </p>
 
               <button className="mt-auto inline-flex items-center gap-2 text-[#ff0101] hover:text-white transition-colors duration-300 font-semibold">
+                <a href={study.link}>
                 Read More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+                </a>
               </button>
             </div>
           </div>

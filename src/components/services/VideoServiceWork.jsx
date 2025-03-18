@@ -10,10 +10,10 @@ const VideoService = () => {
     const currentX = useRef(0); // To track current translateX value smoothly
 
     const works = [
-        { name: "View Project", img: "/assets/img/services/video-works/videoL1.png" },
-        { name: "View Project", img: "/assets/img/services/video-works/videoL2.png" },
-        { name: "View Project", img: "/assets/img/services/video-works/portVidThree.png" },
-        { name: "View Project", img: "/assets/img/services/video-works/videoR1.png" },
+        { name: "View Project", link:"https://vimeo.com/931004763", img: "/assets/img/services/video-works/videoL1.png" },
+        { name: "View Project", link:"https://vimeo.com/930976952", img: "/assets/img/services/video-works/videoL2.png" },
+        { name: "View Project", link:"https://vimeo.com/946386055", img: "/assets/img/services/video-works/portVidThree.png" },
+        { name: "View Project", link:"https://vimeo.com/839538345", img: "/assets/img/services/video-works/videoR1.png" },
     ];
 
     useEffect(() => {
@@ -155,20 +155,22 @@ const VideoService = () => {
                         className="flex w-max cursor-grab transition-transform duration-300 ease-out"
                     >
                         {works.map((work, index) => (
-                            <div
-                                key={index}
-                                className="relative min-w-[250px] h-[350px] overflow-hidden rounded-xl shadow-lg m-3 group"
-                            >
-                                <img
-                                    src={work.img}
-                                    alt={work.name}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
-                                {/* Gradient background only at bottom */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end text-white text-center p-4 transition-opacity duration-500">
-                                    <p className="text-lg font-bold">{work.name}</p>
-                                </div>
+                            <a
+                            key={index}
+                            href={work.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative min-w-[250px] h-[350px] overflow-hidden rounded-xl shadow-lg m-3 group"
+                        >
+                            <img
+                                src={work.img}
+                                alt={work.name}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end text-white text-center p-4 transition-opacity duration-500">
+                                <p className="text-lg font-bold">{work.name}</p>
                             </div>
+                        </a>
                         ))}
                     </div>
                 </div>

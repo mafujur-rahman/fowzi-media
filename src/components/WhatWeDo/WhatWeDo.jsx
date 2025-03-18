@@ -3,8 +3,6 @@ import React, { useEffect, useRef } from "react";
 import { TiArrowRightThick } from "react-icons/ti";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import "./brandsSlyder.css";
 import "./rotateImage.css";
 import "./WhatWeDo.css";
 import Link from "next/link";
@@ -63,21 +61,22 @@ const WhatWeDo = () => {
     );
   }, []);
 
-  // Infinite scrolling animation
+  // infinite loop
+
   useEffect(() => {
     const slider = sliderRef.current;
     const images = Array.from(slider.children);
 
     if (images.length === 0) return;
 
-    // Duplicate images dynamically to create an infinite loop
+    // Duplicate images dynamically to create a seamless loop
     images.forEach((img) => {
       const clone = img.cloneNode(true);
       slider.appendChild(clone);
     });
 
     gsap.to(slider, {
-      x: "-50%",
+      xPercent: -50, // Moves by half the total width
       duration: 50,
       ease: "linear",
       repeat: -1,
@@ -85,7 +84,7 @@ const WhatWeDo = () => {
   }, []);
 
   return (
-    <div id="about" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2
           className="text-2xl font-bold mb-8 text-[#FF0101]"
@@ -148,19 +147,18 @@ const WhatWeDo = () => {
         </div>
 
         {/* INFINITE SCROLLING SLIDER */}
-        <div className="slider-container">
-          <div className="image-slider" ref={sliderRef}>
-            
-                <div className="image-wrapper"><img src="/tONe.png" alt="brand-1" /></div>
-                <div className="image-wrapper"><img src="/tChair.png" alt="brand-2" /></div>
-                <div className="image-wrapper"><img src="/tRisingImpact.png" alt="brand-3" /></div>
-                <div className="image-wrapper"><img src="/trustedLogoFour.png" alt="brand-4" /></div>
-                <div className="image-wrapper"><img src="/trustedLogoThree.png" alt="brand-5" /></div>
-                <div className="image-wrapper"><img src="/trustedLogoSeven.png" alt="brand-6" /></div>
+        <div className="overflow-hidden w-full relative my-16">
+      <div className="flex gap-20 whitespace-nowrap items-center" ref={sliderRef}>
+        <img src="/tONe.png" alt="brand-1" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+        <img src="/tChair.png" alt="brand-2" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+        <img src="/tRisingImpact.png" alt="brand-3" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+        <img src="/trustedLogoFour.png" alt="brand-4" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+        <img src="/trustedLogoThree.png" alt="brand-5" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+        <img src="/trustedLogoSeven.png" alt="brand-6" className="h-16 w-auto object-contain filter brightness-75 contrast-125" />
+      </div>
+    </div>
 
-           
-          </div>
-        </div>
+
 
       </div>
     </div>

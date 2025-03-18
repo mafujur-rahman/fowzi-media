@@ -65,36 +65,36 @@ export default function AboutUsArea() {
     //  Image Scroll Animation
     if (imageRef.current) {
       gsap.to(imageRef.current, {
-        y: -200, 
+        y: -200,
         scrollTrigger: {
           trigger: imageRef.current,
-          start: "top bottom", 
-          end: "bottom top", 
-          scrub: 1, 
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
         },
       });
     }
     //  Image 2 Scroll Animation
     if (image2Ref.current) {
       gsap.to(image2Ref.current, {
-        y: -200, 
+        y: -200,
         scrollTrigger: {
           trigger: image2Ref.current,
-          start: "-10% bottom", 
-          end: "bottom -10%", 
-          scrub: 1, 
+          start: "-10% bottom",
+          end: "bottom -10%",
+          scrub: 1,
         },
       });
     }
     //  Image 3 Scroll Animation
     if (image3Ref.current) {
       gsap.to(image3Ref.current, {
-        y: -100, 
+        y: -100,
         scrollTrigger: {
           trigger: image3Ref.current,
-          start: "bottom 5%", 
-          end: "5% bottom", 
-          scrub: 1, 
+          start: "bottom 5%",
+          end: "5% bottom",
+          scrub: 1,
         },
       });
     }
@@ -181,22 +181,35 @@ export default function AboutUsArea() {
           </div>
 
           {/* Left List */}
-          <div className="w-full md:w-1/3 mb-8">
-            <ul className="space-y-3 text-gray-800 text-lg">
-              <li><span className="mr-2 text-[#FF0101]">■</span>Video & music Production</li>
-              <li><span className="mr-2 text-[#FF0101]">■</span>Photography</li>
-              <li><span className="mr-2 text-[#FF0101]">■</span>Strategic Communications</li>
+          <div className="w-full md:w-1/3 my-16">
+            <ul className="flex flex-col space-y-3 text-gray-800 text-lg">
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Video & music Production
+              </li>
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Photography
+              </li>
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Strategic Communications
+              </li>
             </ul>
           </div>
 
           {/* Right List */}
-          <div className="w-full md:w-1/3 mb-8">
-            <ul className="space-y-3 text-gray-800 text-lg">
-              <li><span className="mr-2 text-[#FF0101]">■</span>Branding & Marketing</li>
-              <li><span className="mr-2 text-[#FF0101]">■</span>Visual Storytelling</li>
-              <li><span className="mr-2 text-[#FF0101]">■</span>Building Communities</li>
+          <div className="w-full md:w-1/3 my-16">
+            <ul className="flex flex-col space-y-3 text-gray-800 text-lg">
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Branding & Marketing
+              </li>
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Visual Storytelling
+              </li>
+              <li className="flex items-center min-w-[200px] whitespace-nowrap">
+                <span className="mr-2 text-[#FF0101]">■</span>Building Communities
+              </li>
             </ul>
           </div>
+
         </div>
       </div>
     </div>

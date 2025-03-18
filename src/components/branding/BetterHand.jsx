@@ -50,8 +50,8 @@ const BetterHand = () => {
                     className="absolute top-0 left-0 w-full h-full transition-transform duration-100 ease-out"
                 >
                     <Image
-                        src="/assets/img/services/betterhand community/branding mockup/logo mockup/logo.png"
-                        alt="about-img-1"
+                        src="/assets/img/branding/betterhand community/branding mockup/logo mockup/logo.png"
+                        alt="better-hand-logo"
                         className="w-full h-full object-cover"
                         layout="fill"
                         priority

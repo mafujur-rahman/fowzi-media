@@ -51,7 +51,7 @@ const FridayFashion = () => {
                     className="absolute top-0 left-0 w-full h-full transition-transform duration-100 ease-out"
                 >
                     <Image
-                        src="/assets/img/services/friday fashion/branding/logo mokcup/logo mockup.png"
+                        src="/assets/img/branding/friday fashion/branding/logo mokcup/logo mockup.png"
                         alt="about-img-1"
                         className="w-full h-full object-cover"
                         layout="fill"
